@@ -37,7 +37,7 @@ vector<int> optimalSolution(vector<int> arr){
 
 
 int main(){
-    vector<int> arr = {1, 3, 3, 5, 6, 7, 7};
+    vector<int> arr = {1, 9, 3, 5, 6, 7, 7};
     vector<int> ans = solution(arr);
 
     for(int num : ans){
@@ -45,7 +45,7 @@ int main(){
     }
 
 
-    vector<int> arr2 = {1, 3, 3, 5, 6, 7, 7};
+    vector<int> arr2 = {1, 9, 3, 5, 6, 7, 7};
     vector<int> ans2 = optimalSolution(arr2);
 
     for(int num : ans2){
