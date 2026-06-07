@@ -1,11 +1,12 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-
-vector<vector<int>> solution(vector<int> arr){
-    if(arr.size() < 3){
+vector<vector<int>> solution(vector<int> arr)
+{
+    if (arr.size() < 3)
+    {
         return {};
     };
 
@@ -13,43 +14,52 @@ vector<vector<int>> solution(vector<int> arr){
 
     vector<vector<int>> ans;
 
-    for(int i = 0; i < arr.size(); i++){
+    for (int i = 0; i < arr.size(); i++)
+    {
         int low = i + 1;
         int high = arr.size() - 1;
 
-        while(low < high){
+        if (i > 0 && arr[i] == arr[i - 1])
+            continue;
 
-        int sum = arr[low] + arr[i] + arr[high];
-
-        if(sum == 0){
-            ans.push_back({arr[i], arr[low], arr[high]});
-            low ++;
-            high --;
-        }
-
-        if(sum > 0){
-            high --;
-        }else if (sum < 0)
+        while (low < high)
         {
-            low ++;
-        };
-    }
-        
+
+            int sum = arr[low] + arr[i] + arr[high];
+
+            if (sum == 0)
+            {
+                ans.push_back({arr[i], arr[low], arr[high]});
+                low++;
+                high--;
+            }
+
+            if (sum > 0)
+            {
+                high--;
+            }
+            else if (sum < 0)
+            {
+                low++;
+            };
+        }
     }
 
     return ans;
 }
 
-
-int main(){
+int main()
+{
 
     vector<int> arr = {-1, 0, 1, 2, -1, -4};
 
     vector<vector<int>> ans = solution(arr);
 
-    for(int i = 0; i < ans.size(); i++){
+    for (int i = 0; i < ans.size(); i++)
+    {
 
-        for(int j = 0; j < ans[i].size(); j++){
+        for (int j = 0; j < ans[i].size(); j++)
+        {
 
             cout << ans[i][j] << " ";
         }

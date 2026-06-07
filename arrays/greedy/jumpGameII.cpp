@@ -9,7 +9,7 @@ int solution(vector<int> arr){
     int currentEnd = 0;
     int farthest = 0;
 
-    for(int i = 0; i < arr.size(); i++){
+    for(int i = 0; i < arr.size() - 1; i++){
         farthest = max(farthest, i + arr[i]);
 
         if(i == currentEnd){

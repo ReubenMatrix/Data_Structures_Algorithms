@@ -33,9 +33,17 @@ vector<vector<int>> optimalSolution(vector<int> arr, int target){
     sort(arr.begin(), arr.end());
 
     for(int i = 0; i < arr.size() - 2; i++){
+
+        if (i > 0 && arr[i] == arr[i - 1])
+            continue;
+
         for(int j = i + 1; j < arr.size() - 1; j++){
             int low = j + 1; 
             int high = arr.size() - 1;
+
+            if (j > i + 1 && arr[j] == arr[j - 1])
+                continue;
+            
 
             while(low < high){
 
@@ -67,7 +75,7 @@ int main(){
 
     int target = 2;
 
-    vector<vector<int>> ans = solution(arr, target);
+    vector<vector<int>> ans = optimalSolution(arr, target);
 
     for(int i = 0; i < ans.size(); i++){
 
