@@ -30,6 +30,18 @@
       <td>Two Pointers</td>
       <td>https://reubendsouza.substack.com/p/arrays-pattern-recognition-102</td>
     </tr>
+     <tr>
+      <td>4</td>
+      <td>Stack</td>
+      <td>Medium Problems</td>
+      <td>https://reubendsouza.substack.com/p/stacks-pattern-recognition-101</td>
+    </tr>
+     <tr>
+      <td>5</td>
+      <td>Stack</td>
+      <td>Monotonic Stack</td>
+      <td>https://reubendsouza.substack.com/p/stacks-pattern-recognition-102</td>
+    </tr>
   </tbody>
 </table>
 
